@@ -8,10 +8,6 @@ This project is a clone of the Discord homepage, built using HTML, Tailwind CSS,
 - **Tailwind CSS** for styling
 - **JavaScript** for interactivity and scroll animations
 
-## Demo
-
-[Insert a screenshot or GIF of your project here]
-
 ## Installation
 
 To run this project locally, follow these steps:
