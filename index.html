@@ -148,7 +148,7 @@
         >
           <!-- left image -->
           <div class="my-auto">
-            <img src="images/section1Image.svg" alt="" loading="lazy" />
+            <img src="images/section1Image.svg" alt="" />
           </div>
 
           <!-- right content -->
@@ -192,7 +192,7 @@
 
           <!-- right image -->
           <div class="my-auto md:w-[100%]">
-            <img src="images/section2Image.svg" loading="lazy" />
+            <img src="images/section2Image.svg" />
           </div>
         </div>
       </section>
@@ -204,7 +204,7 @@
         >
           <!-- left image -->
           <div class="my-auto">
-            <img src="images/section3Image.svg" alt="" loading="lazy" />
+            <img src="images/section3Image.svg" alt="" />
           </div>
 
           <!-- right content -->
@@ -376,6 +376,18 @@
         </div>
       </section>
     </div>
-    <script src="app.js"></script>
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.target.classList.contains('hide')) {
+            entry.target.classList.add('show');
+          }
+        });
+      });
+
+      const hiddenElements = document.querySelectorAll('.hide');
+
+      hiddenElements.forEach((el) => observer.observe(el));
+    </script>
   </body>
 </html>
